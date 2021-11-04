@@ -1,5 +1,4 @@
-function Alert()
-{
-    alert("Konec stránky");
+function trollAdama(){
+    console.log("Adam je opička");
 }
-//Alert();
+trollAdama();
