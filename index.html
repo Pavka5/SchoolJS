@@ -9,13 +9,53 @@
     <script>
         //alert("Ahoj");
     </script>
+    <script src="js/index.js"></script>
 </head>
 <body>
-    <h1>JavaScript test</h1>
 
-    <button onclick="alert('Ahoj!')">Pozdrav!</button>
+    <p onmouseover="change(1)" onmouseleave="change(2)">Vítej, cizinče v Habýkovo katakombách!</p>
 
-    <script src="js/index.js"></script>
+    <button onclick="prictiJedna()"> + </button>
+    <button onclick="odectiJedna()"> - </button>
+    <button onclick="vypisCislo()"> Show </button>
+    <button onclick="vynasobDeseti()"> * 10 </button>
+    <button onclick="vydelSedmnacti()"> / 17</button>
+
+    <script>
+
+        function change(par){
+            if(par == 1){
+                var ps = document.getElementsByTagName("p");
+                ps[0].innerHTML = "Muhahahaha";
+            }else {
+                var ps = document.getElementsByTagName("p");
+                ps[0].innerHTML = "Vítej, cizinče v Habýkovo katakombách!";
+            }
+        }
+        
+
+        var cisloNula = 0;
+
+        function prictiJedna(){
+            cisloNula++;
+        }
+
+        function odectiJedna(){
+            cisloNula--;
+        }
+
+        function vynasobDeseti(){
+            cisloNula *= 10;
+        }
+
+        function vydelSedmnacti(){
+            cisloNula /= 17;
+        }
+
+        function vypisCislo(){
+            console.log(cisloNula);
+        }
+    </script>
 </body>
 </html>
 
